@@ -1,17 +1,26 @@
 'use client';
 import { useMemo, useState } from 'react';
 
+type Model = 'rear' | 'front' | 'quad';
+
+const MODEL_LABEL: Record<Model, string> = {
+  rear: 'Задняя опора',
+  front: 'Передняя опора',
+  quad: 'Четырёхопорная',
+};
+
 export function SizeCalculator() {
   const [weight, setWeight] = useState<number>(10);
   const [length, setLength] = useState<number>(40);
 
   const result = useMemo(() => {
     // Примерная логика подбора — заглушка, адаптируйте под реальные правила
-    let model: 'rear' | 'front' | 'quad' = 'rear';
+    let model: Model = 'rear';
     if (weight > 35 || length > 75) model = 'quad';
     if (weight < 8 && length < 35) model = 'rear';
+    // При необходимости добавь сюда ветку model = 'front' по правилам подбора
 
-    const wheel = weight < 12 ? '8–10\"' : weight < 25 ? '12\"' : '14–16\"';
+    const wheel = weight < 12 ? '8–10"' : weight < 25 ? '12"' : '14–16"';
     const frame = length < 45 ? 'S' : length < 65 ? 'M' : 'L';
 
     return { model, wheel, frame };
@@ -46,7 +55,7 @@ export function SizeCalculator() {
 
       <div className="mt-6 rounded-xl bg-slate-50 p-4 border">
         <p className="text-sm text-slate-600">Рекомендация:</p>
-        <p className="font-medium mt-1">Модель: {result.model === 'rear' ? 'Задняя опора' : result.model === 'front' ? 'Передняя опора' : 'Четырёхопорная'}</p>
+        <p className="font-medium mt-1">Модель: {MODEL_LABEL[result.model]}</p>
         <p className="text-sm">Размер рамы: {result.frame}</p>
         <p className="text-sm">Диаметр колёс: {result.wheel}</p>
       </div>
