@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from '@/components/SpeedInsights';
 
 export const metadata: Metadata = {
   title: 'Инвалидные коляски для собак — Производство LAPLIVE',
