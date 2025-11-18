@@ -5,9 +5,10 @@ import { Footer } from '@/components/Footer';
 import { VercelAnalytics } from '@/components/VercelAnalytics';
 
 export const metadata: Metadata = {
-  title: 'Инвалидные коляски для собак — Производство',
-  description: 'Индивидуальные и серийные инвалидные коляски для собак. Подбор размера, консультации, доставка.',
-  metadataBase: new URL('https://example.com'),
+  title: 'DogWheel — поддержка движения для собак, кроликов и других питомцев',
+  description:
+    'DogWheel проектирует и производит тёплые и технологичные решения поддержки для животных: подбор, кастомизация и сопровождение.',
+  metadataBase: new URL('https://laplive.ru'),
   icons: {
     icon: '/favicon.svg'
   }

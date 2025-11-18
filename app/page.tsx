@@ -27,7 +27,7 @@ export default function HomePage() {
       </section>
 
       <section className="rounded-3xl border border-brand-100/60 bg-gradient-to-br from-white via-brand-50/40 to-white p-8 space-y-4">
-        <h2 className="text-2xl font-semibold">Коляска как эстетика движения</h2>
+        <h2 className="text-2xl font-semibold">DogWheel — эстетика движения</h2>
         <p className="text-stone-600">
           Мы разрабатываем решения в плотном взаимодействии с ведущими реабилитологами России и практикующим врачом в
           команде. Конструкции получаются не только функциональными, но и красивыми — они поддерживают бодрый образ

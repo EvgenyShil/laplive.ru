@@ -33,31 +33,25 @@ export function ContactForm() {
     ].join('\n');
   }, [animal, customAnimal, height, length, supportFront, supportRear, weight, width]);
 
-  function openTelegram(url: string) {
-    const opened = window.open(url, '_blank', 'noopener,noreferrer');
-    if (!opened) {
-      window.location.href = url;
-      return false;
-    }
-    return true;
-  }
-
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const encoded = encodeURIComponent(message);
     const appUrl = `tg://resolve?domain=your_dog_is_happy&text=${encoded}`;
     const webUrl = `https://t.me/your_dog_is_happy?text=${encoded}`;
-    const launched = openTelegram(appUrl);
+    const openTelegram = (url: string) => {
+      const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+      if (!newWindow) {
+        window.location.href = url;
+      }
+    };
 
-    if (!launched) {
-      return;
-    }
+    openTelegram(appUrl);
 
     setTimeout(() => {
       if (document.visibilityState === 'visible') {
         openTelegram(webUrl);
       }
-    }, 700);
+    }, 1000);
   }
 
   return (
