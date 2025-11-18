@@ -1,5 +1,6 @@
 'use client';
 
+
 import { useMemo, useState } from 'react';
 
 export function ContactForm() {
@@ -25,6 +26,7 @@ export function ContactForm() {
     return [
       'Запрос на подбор коляски',
       `Вид питомца: ${animalName}`,
+
       `Примерный вес: ${weight || '—'} кг`,
       `Примерная длина: ${length || '—'} см`,
       `Примерная высота: ${height || '—'} см`,
@@ -35,6 +37,7 @@ export function ContactForm() {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
     const encoded = encodeURIComponent(message);
     const appUrl = `tg://resolve?domain=your_dog_is_happy&text=${encoded}`;
     const webUrl = `https://t.me/your_dog_is_happy?text=${encoded}`;
@@ -52,12 +55,15 @@ export function ContactForm() {
         openTelegram(webUrl);
       }
     }, 1000);
+
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
+
         <label className="block text-sm mb-1">Вид питомца</label>
+
         <select value={animal} onChange={e => setAnimal(e.target.value as 'dog' | 'rabbit' | 'other')} className={fieldClass}>
           <option value="dog">Собака</option>
           <option value="rabbit">Кролик</option>

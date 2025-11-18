@@ -5,9 +5,11 @@ export function Hero() {
   return (
     <section className="grid lg:grid-cols-2 gap-8 items-center rounded-3xl border border-brand-100/70 bg-gradient-to-br from-white via-brand-50/50 to-white p-8 shadow-sm">
       <div className="space-y-6">
+
         <h1 className="text-4xl sm:text-5xl font-semibold leading-tight text-stone-900">DogWheel возвращает прогулки и характер вашего питомца</h1>
         <p className="text-stone-600 text-lg">
           С нашими решениями жизнь — это галгол: яркие конструкции поддерживают питомца, не выглядят как медоборудование и подчёркивают его уверенность.
+
         </p>
         <div className="flex gap-3">
           <Link href="/contact#fit-form" className="inline-flex items-center rounded-xl bg-brand-600 px-5 py-3 text-white shadow hover:bg-brand-700">Подобрать коляску</Link>
