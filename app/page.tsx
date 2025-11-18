@@ -34,7 +34,7 @@ export default function HomePage() {
           питомца и не вызывают грусти при взгляде.
         </p>
         <p className="text-stone-600">
-          Каждая коляска окрашивается в выбранную вами гамму, чтобы подчеркнуть характер вашего животного.
+          Каждая коляска окрашивается в выбранную вами гамму, чтобы подчеркнуть характер вашего питомца.
         </p>
       </section>
 
@@ -43,7 +43,7 @@ export default function HomePage() {
         <ol className="space-y-4">
           <li className="rounded-2xl border border-brand-100/60 p-5 bg-white/80">
             <h3 className="font-semibold">1. Запрос</h3>
-            <p className="text-stone-600">Вы пишете нам, какое животное, сколько весит и какую проблему нужно компенсировать.</p>
+            <p className="text-stone-600">Вы пишете нам, какой питомец, сколько весит и какую проблему нужно компенсировать.</p>
           </li>
           <li className="rounded-2xl border border-brand-100/60 p-5 bg-white/80">
             <h3 className="font-semibold">2. Снятие мерок</h3>

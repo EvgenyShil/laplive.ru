@@ -24,7 +24,7 @@ export function ContactForm() {
 
     return [
       'Запрос на подбор коляски',
-      `Вид животного: ${animalName}`,
+      `Вид питомца: ${animalName}`,
       `Примерный вес: ${weight || '—'} кг`,
       `Примерная длина: ${length || '—'} см`,
       `Примерная высота: ${height || '—'} см`,
@@ -57,7 +57,7 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label className="block text-sm mb-1">Вид животного</label>
+        <label className="block text-sm mb-1">Вид питомца</label>
         <select value={animal} onChange={e => setAnimal(e.target.value as 'dog' | 'rabbit' | 'other')} className={fieldClass}>
           <option value="dog">Собака</option>
           <option value="rabbit">Кролик</option>

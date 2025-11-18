@@ -6,7 +6,7 @@ export function Header() {
       <div className="container flex items-center justify-between h-16">
         <Link href="/" className="font-semibold tracking-tight text-stone-800">
           DogWheel
-          <span className="sr-only"> — поддержка движения для животных</span>
+          <span className="sr-only"> — поддержка движения для питомцев</span>
         </Link>
         <nav aria-label="Основная навигация" className="flex items-center gap-6 text-sm text-stone-700">
           <Link href="/products" className="hover:text-stone-900">Модели</Link>
