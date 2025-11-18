@@ -21,19 +21,27 @@ export default function HomePage() {
           />
           <FeatureCard
             title="Гибкая кастомизация"
-            description="Дорабатываем конструкцию в процессе эксплуатации: меняем опоры, ремни, колёса, расцветку."
+
+            description="Кастомизация вашей коляски в процессе эксплуатации."
+
           />
         </div>
       </section>
 
       <section className="rounded-3xl border border-brand-100/60 bg-gradient-to-br from-white via-brand-50/40 to-white p-8 space-y-4">
-        <h2 className="text-2xl font-semibold">Коляска как эстетика движения</h2>
+
+        <h2 className="text-2xl font-semibold">DogWheel — эстетика движения</h2>
+
         <p className="text-stone-600">
           Мы разрабатываем решения в плотном взаимодействии с ведущими реабилитологами России и практикующим врачом в
           команде. Конструкции получаются не только функциональными, но и красивыми — они поддерживают бодрый образ
           питомца и не вызывают грусти при взгляде.
         </p>
-        <p className="text-stone-600">Каждая коляска окрашивается в выбранную вами гамму, чтобы подчеркнуть характер хвоста.</p>
+
+        <p className="text-stone-600">
+          Каждая коляска окрашивается в выбранную вами гамму, чтобы подчеркнуть характер вашего питомца.
+        </p>
+
       </section>
 
       <section className="space-y-6">
@@ -41,7 +49,9 @@ export default function HomePage() {
         <ol className="space-y-4">
           <li className="rounded-2xl border border-brand-100/60 p-5 bg-white/80">
             <h3 className="font-semibold">1. Запрос</h3>
+
             <p className="text-stone-600">Вы пишете нам, какое животное, сколько весит и какую проблему нужно компенсировать.</p>
+
           </li>
           <li className="rounded-2xl border border-brand-100/60 p-5 bg-white/80">
             <h3 className="font-semibold">2. Снятие мерок</h3>

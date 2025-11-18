@@ -35,7 +35,9 @@ export default function ContactPage() {
           <div>
             <h2 className="text-2xl font-semibold">Подобрать коляску</h2>
             <p className="text-stone-600">
-              Заполните форму — мы соберём сообщение и откроем Telegram с черновиком для отправки нам.
+
+              Заполните форму — мы соберём сообщение и автоматически откроем Telegram с черновиком для отправки нам.
+
             </p>
           </div>
           <ContactForm />

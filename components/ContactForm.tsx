@@ -1,5 +1,6 @@
 'use client';
 
+
 import { useMemo, useState } from 'react';
 
 export function ContactForm() {
@@ -24,7 +25,8 @@ export function ContactForm() {
 
     return [
       'Запрос на подбор коляски',
-      `Вид животного: ${animalName}`,
+      `Вид питомца: ${animalName}`,
+
       `Примерный вес: ${weight || '—'} кг`,
       `Примерная длина: ${length || '—'} см`,
       `Примерная высота: ${height || '—'} см`,
@@ -35,18 +37,33 @@ export function ContactForm() {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const url = new URL('https://t.me/your_dog_is_happy');
-    url.searchParams.set('text', message);
-    const opened = window.open(url.toString(), '_blank', 'noopener,noreferrer');
-    if (!opened) {
-      window.location.href = url.toString();
-    }
+
+    const encoded = encodeURIComponent(message);
+    const appUrl = `tg://resolve?domain=your_dog_is_happy&text=${encoded}`;
+    const webUrl = `https://t.me/your_dog_is_happy?text=${encoded}`;
+    const openTelegram = (url: string) => {
+      const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+      if (!newWindow) {
+        window.location.href = url;
+      }
+    };
+
+    openTelegram(appUrl);
+
+    setTimeout(() => {
+      if (document.visibilityState === 'visible') {
+        openTelegram(webUrl);
+      }
+    }, 1000);
+
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label className="block text-sm mb-1">Вид животного</label>
+
+        <label className="block text-sm mb-1">Вид питомца</label>
+
         <select value={animal} onChange={e => setAnimal(e.target.value as 'dog' | 'rabbit' | 'other')} className={fieldClass}>
           <option value="dog">Собака</option>
           <option value="rabbit">Кролик</option>
