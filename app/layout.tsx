@@ -7,7 +7,10 @@ import { VercelAnalytics } from '@/components/VercelAnalytics';
 export const metadata: Metadata = {
   title: 'Инвалидные коляски для собак — Производство',
   description: 'Индивидуальные и серийные инвалидные коляски для собак. Подбор размера, консультации, доставка.',
-  metadataBase: new URL('https://example.com')
+  metadataBase: new URL('https://example.com'),
+  icons: {
+    icon: '/favicon.svg'
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

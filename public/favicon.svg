@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DogWheel icon">
+  <defs>
+    <linearGradient id="warm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb347" />
+      <stop offset="100%" stop-color="#ff5f6d" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#warm)" />
+  <path d="M20 34c0-7.732 6.268-14 14-14s14 6.268 14 14-6.268 14-14 14" fill="none" stroke="#fff5e6" stroke-width="6" stroke-linecap="round" />
+  <path d="M14 40c3 6 9 10 16 10" fill="none" stroke="#fff5e6" stroke-width="6" stroke-linecap="round" />
+  <circle cx="22" cy="24" r="4" fill="#fff5e6" />
+</svg>
