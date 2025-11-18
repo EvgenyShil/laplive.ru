@@ -6,9 +6,9 @@ export function CTA() {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h3 className="text-2xl font-semibold">Готовы помочь вашему питомцу</h3>
-          <p className="text-slate-600">Отправьте параметры — предложим конфигурацию и смету.</p>
+          <p className="text-slate-600">Фиксируем мерки, моделируем в 3D и держим связь на каждом этапе.</p>
         </div>
-        <Link href="/contact" className="inline-flex items-center rounded-xl bg-brand-600 px-5 py-3 text-white hover:bg-brand-700">Связаться</Link>
+        <Link href="/contact#fit-form" className="inline-flex items-center rounded-xl bg-brand-600 px-5 py-3 text-white hover:bg-brand-700">Подобрать коляску</Link>
       </div>
     </section>
   );

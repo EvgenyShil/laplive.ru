@@ -1,9 +1,30 @@
 import Image from 'next/image';
 
 const products = [
-  { id: 'rear', title: 'Задняя опора', desc: 'Для собак с парезом/параличом задних конечностей.', img: '/images/dog-placeholder.jpg' },
-  { id: 'front', title: 'Передняя опора', desc: 'Поддержка передних конечностей при неврологических патологиях.', img: '/images/dog-placeholder.jpg' },
-  { id: 'quad', title: 'Четырёхопорная', desc: 'Полная поддержка корпуса и баланса.', img: '/images/dog-placeholder.jpg' },
+  {
+    id: 'rear',
+    title: 'Поддержка задних лап',
+    desc: 'Для животных с парезом или параличом задних конечностей: настраиваем по высоте, ширине и длине корпуса.',
+    img: '/images/dog-placeholder.jpg'
+  },
+  {
+    id: 'quad',
+    title: 'Поддержка всех четырёх лап',
+    desc: 'Опоры спереди и сзади удерживают корпус в равновесии и снимают нагрузку с позвоночника.',
+    img: '/images/dog-placeholder.jpg'
+  },
+  {
+    id: 'rabbit',
+    title: 'Коляска для кролика',
+    desc: 'Конструкция с учётом миниатюрного корпуса и чувствительных лапок. Мягкие фиксаторы не трут кожу.',
+    img: '/images/dog-placeholder.jpg'
+  },
+  {
+    id: 'custom',
+    title: 'Изготовление для любого животного',
+    desc: 'Если вашего любимца нет в каталоге, мы смоделируем индивидуальную коляску под мерки и особенности вида.',
+    img: '/images/dog-placeholder.jpg'
+  }
 ];
 
 export default function ProductsPage() {
