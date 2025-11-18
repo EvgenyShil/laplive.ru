@@ -1,6 +1,7 @@
 export default function AboutPage() {
   return (
-    <div className="container py-12 prose prose-slate max-w-none">
+    <div className="container py-12">
+      <div className="prose prose-stone max-w-none rounded-3xl border border-brand-100/60 bg-white/80 p-8 shadow-sm">
       <h1>О нас</h1>
       <p>
         Мы верим, что жизнь на колёсах — это галгол и радость движения. Поэтому делаем коляски, которые выглядят бодро и
@@ -16,6 +17,7 @@ export default function AboutPage() {
         <li>Используем технологичные материалы, печатаем индивидуальные узлы и красим раму в выбранные цвета.</li>
         <li>Поддерживаем на этапе примерки и в эксплуатации, вносим улучшения по мере необходимости.</li>
       </ul>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 export default function FAQPage() {
   return (
-    <div className="container py-12 prose prose-slate max-w-none">
+    <div className="container py-12">
+      <div className="prose prose-stone max-w-none rounded-3xl border border-brand-100/60 bg-white/80 p-8 shadow-sm">
       <h1>FAQ</h1>
       <h3>Сколько идёт изготовление?</h3>
       <p>Обычно до 2 недель с момента подтверждения мерок.</p>
@@ -8,6 +9,7 @@ export default function FAQPage() {
       <p>На разработку и производство уходит около 1 месяца — согласовываем узлы и отправляем промежуточные рендеры.</p>
       <h3>Доставка</h3>
       <p>Доставляем по России и миру: коляска приезжает настроенной, а мы остаёмся на связи для подсказок.</p>
+      </div>
     </div>
   );
 }

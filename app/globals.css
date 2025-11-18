@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --bg: 255 255 255;
-  --fg: 17 24 39; /* slate-900 */
+  --bg: 255 248 242;
+  --fg: 30 21 15; /* warm dark */
 }
 
 html, body, #__next {
@@ -13,7 +13,7 @@ html, body, #__next {
 
 body {
   color: rgb(var(--fg));
-  background: rgb(var(--bg));
+  background: linear-gradient(180deg, rgba(255, 248, 242, 1) 0%, rgba(255, 238, 222, 1) 50%, rgba(255, 249, 244, 1) 100%);
 }
 
 .container {

@@ -29,15 +29,15 @@ const products = [
 
 export default function ProductsPage() {
   return (
-    <div className="container py-12">
+    <div className="container py-12 text-stone-900">
       <h1 className="text-3xl font-semibold mb-8">Модели</h1>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map(p => (
-          <article key={p.id} className="rounded-2xl border bg-white/50 shadow-sm overflow-hidden">
+          <article key={p.id} className="rounded-2xl border border-brand-100/60 bg-white/80 shadow-sm overflow-hidden">
             <Image src={p.img} alt={p.title} width={800} height={600} className="h-48 w-full object-cover" />
             <div className="p-4">
               <h3 className="text-xl font-semibold">{p.title}</h3>
-              <p className="text-sm text-slate-600 mt-2">{p.desc}</p>
+              <p className="text-sm text-stone-600 mt-2">{p.desc}</p>
             </div>
           </article>
         ))}
