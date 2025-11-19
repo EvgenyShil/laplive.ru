@@ -5,11 +5,22 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { VercelAnalytics } from '@/components/VercelAnalytics';
 
+const title = 'DogWheel — поддержка движения для собак, кроликов и других животных';
+const description =
+  'Индивидуальные технологичные коляски для животных. Лёгкие, прочные и эстетичные конструкции, разработанные под вашего питомца.';
+
 export const metadata: Metadata = {
-  title: 'DogWheel — поддержка движения для собак, кроликов и других питомцев',
-  description:
-    'DogWheel проектирует и производит тёплые и технологичные решения поддержки для питомцев: подбор, кастомизация и сопровождение.',
-  metadataBase: new URL('https://laplive.ru'),
+  title,
+  description,
+  metadataBase: new URL('https://dogwheel.ru'),
+  openGraph: {
+    title,
+    description,
+    url: 'https://dogwheel.ru/',
+    siteName: 'DogWheel',
+    locale: 'ru_RU',
+    type: 'website'
+  },
   icons: {
     icon: '/favicon.svg'
   }
@@ -23,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="yandex-verification" content="793414969bb2bc39" />
         <meta name="yandex-verification" content="9f47667387e00b0d" />
         <meta name="yandex-verification" content="91d0c0dde46a84ab" />
+        <link rel="canonical" href="https://dogwheel.ru/" />
         <Script id="yandex-metrika" strategy="afterInteractive">
           {`
             (function(m,e,t,r,i,k,a){

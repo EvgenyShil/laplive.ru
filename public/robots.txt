@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dogwheel.ru/sitemap.xml
+Host: dogwheel.ru
