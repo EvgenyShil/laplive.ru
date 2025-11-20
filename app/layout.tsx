@@ -9,6 +9,33 @@ const title = 'DogWheel — поддержка движения для соба�
 const description =
   'Индивидуальные технологичные коляски для животных. Лёгкие, прочные и эстетичные конструкции, разработанные под вашего питомца.';
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'DogWheel',
+  url: 'https://dogwheel.ru',
+  logo: 'https://dogwheel.ru/favicon.svg',
+  sameAs: ['https://t.me/your_dog_is_happy'],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+7-903-220-35-02',
+    contactType: 'customer service',
+    availableLanguage: ['Russian']
+  }
+};
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  url: 'https://dogwheel.ru',
+  name: 'DogWheel',
+  potentialAction: {
+    '@type': 'ContactAction',
+    target: 'https://dogwheel.ru/contact',
+    name: 'Связаться с командой DogWheel'
+  }
+};
+
 export const metadata: Metadata = {
   title,
   description,
@@ -35,6 +62,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="yandex-verification" content="9f47667387e00b0d" />
         <meta name="yandex-verification" content="91d0c0dde46a84ab" />
         <link rel="canonical" href="https://dogwheel.ru/" />
+        <Script id="organization-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify([organizationJsonLd, websiteJsonLd])}
+        </Script>
         <Script id="yandex-metrika" strategy="afterInteractive">
           {`
             (function(m,e,t,r,i,k,a){
