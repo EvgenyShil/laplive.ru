@@ -40,6 +40,13 @@ export const metadata: Metadata = {
   title,
   description,
   metadataBase: new URL('https://dogwheel.ru'),
+  keywords: [
+    'DogWheel',
+    'коляски для животных',
+    'коляска для собаки',
+    'коляска для кролика',
+    'реабилитация питомцев'
+  ],
   openGraph: {
     title,
     description,
@@ -48,6 +55,7 @@ export const metadata: Metadata = {
     locale: 'ru_RU',
     type: 'website'
   },
+  alternates: { canonical: '/' },
   icons: {
     icon: '/favicon.svg'
   }
@@ -61,7 +69,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="yandex-verification" content="793414969bb2bc39" />
         <meta name="yandex-verification" content="9f47667387e00b0d" />
         <meta name="yandex-verification" content="91d0c0dde46a84ab" />
-        <link rel="canonical" href="https://dogwheel.ru/" />
         <Script id="organization-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify([organizationJsonLd, websiteJsonLd])}
         </Script>
