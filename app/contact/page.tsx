@@ -1,5 +1,23 @@
+import type { Metadata } from 'next';
 import { ContactForm } from '@/components/ContactForm';
 import Link from 'next/link';
+
+const title = 'Связаться с DogWheel — подбор и консультация по коляскам для животных';
+const description =
+  'Получите консультацию по материалам, срокам и конфигурациям колясок DogWheel. Быстрые ответы в Telegram и по телефону.';
+
+export const metadata: Metadata = {
+  title,
+  description,
+  keywords: ['DogWheel контакты', 'консультация коляски для собак', 'подбор размера коляски'],
+  alternates: { canonical: '/contact' },
+  openGraph: {
+    title,
+    description,
+    url: 'https://dogwheel.ru/contact',
+    type: 'article'
+  }
+};
 
 export default function ContactPage() {
   return (
@@ -35,9 +53,7 @@ export default function ContactPage() {
           <div>
             <h2 className="text-2xl font-semibold">Подобрать коляску</h2>
             <p className="text-stone-600">
-
               Заполните форму — мы соберём сообщение и автоматически откроем Telegram с черновиком для отправки нам.
-
             </p>
           </div>
           <ContactForm />

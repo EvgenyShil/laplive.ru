@@ -1,21 +1,34 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
+
+const title = 'Модели колясок DogWheel — поддержка задних и передних лап питомцев';
+const description =
+  'Каталог решений DogWheel: коляски для задних лап, полный каркас для всех конечностей и индивидуальные конструкции для любых животных.';
+
+export const metadata: Metadata = {
+  title,
+  description,
+  keywords: ['коляска для собак', 'DogWheel модели', 'опора для задних лап', 'индивидуальная коляска'],
+  alternates: { canonical: '/products' },
+  openGraph: {
+    title,
+    description,
+    url: 'https://dogwheel.ru/products',
+    type: 'product.group'
+  }
+};
 
 const products = [
   {
     id: 'rear',
     title: 'Поддержка задних лап',
-
     desc: 'Для питомцев с парезом или параличом задних конечностей: настраиваем по высоте, ширине и длине корпуса.',
-
     img: '/images/dog-placeholder.jpg'
   },
   {
     id: 'quad',
     title: 'Поддержка всех четырёх лап',
-
     desc: 'Опоры спереди и сзади удерживают корпус в равновесии и снимают нагрузку с позвоночника питомца.',
-
- 
     img: '/images/dog-placeholder.jpg'
   },
   {
@@ -26,9 +39,7 @@ const products = [
   },
   {
     id: 'custom',
-
     title: 'Изготовление для любого питомца',
-
     desc: 'Если вашего любимца нет в каталоге, мы смоделируем индивидуальную коляску под мерки и особенности вида.',
     img: '/images/dog-placeholder.jpg'
   }

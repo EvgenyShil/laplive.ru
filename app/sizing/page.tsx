@@ -1,4 +1,22 @@
+import type { Metadata } from 'next';
 import { SizeCalculator } from '@/components/SizeCalculator';
+
+const title = 'Подбор размера коляски DogWheel — расчёт по весу и длине спины';
+const description =
+  'Рассчитайте рекомендуемую конфигурацию коляски DogWheel: введите вес питомца и длину спины, чтобы получить подходящий размер.';
+
+export const metadata: Metadata = {
+  title,
+  description,
+  keywords: ['подбор размера коляски', 'расчёт коляски для собаки', 'DogWheel размер'],
+  alternates: { canonical: '/sizing' },
+  openGraph: {
+    title,
+    description,
+    url: 'https://dogwheel.ru/sizing',
+    type: 'article'
+  }
+};
 
 export default function SizingPage() {
   return (
